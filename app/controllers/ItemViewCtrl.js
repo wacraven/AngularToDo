@@ -1,5 +1,14 @@
 "use strict";
 
-app.controller('ItemViewCtrl', function($scope) {
-	$scope.message = 'This is not the message you are looking for.';
+app.controller('ItemViewCtrl', function($scope, $routeParams, ItemStorage) {
+	$scope.items = [];
+	// $scope.selectedItem = {};
+
+	ItemStorage.getItemList()
+	.then(function(itemCollection) {
+		$scope.items = itemCollection;
+		$scope.selectedItem = $scope.items.filter(function(item) {
+			return item.id === $routeParams.itemId;
+		})[0];
+	});
 });

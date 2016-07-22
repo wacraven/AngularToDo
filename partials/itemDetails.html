@@ -1,2 +1,7 @@
-<h1>Item Details</h1>
-{{message}}
+<h1>{{selectedItem.task}}</h1>
+<h4>Assigned To: {{selectedItem.assignedTo}}</h4>
+<h4>Due Date: {{selectedItem.dueDate}}</h4>
+<h4>Dependencies: {{selectedItem.dependencies}}</h4>
+<h4>Location: {{selectedItem.location}}</h4>
+<h4>Urgency: {{selectedItem.urgency}}</h4>
+<h4>Completed: {{(selectedItem.isCompleted ? "yes" : "no")}}</h4>

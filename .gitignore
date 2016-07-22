@@ -1,3 +1,8 @@
 lib/bower_components
 lib/node_modules
 styles/main.css
+app/values/FirebaseCreds.js
+.firebaserc
+database.rules.json
+firebase.json
+public/
